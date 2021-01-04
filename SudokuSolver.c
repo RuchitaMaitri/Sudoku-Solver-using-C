@@ -87,12 +87,10 @@ int inBlock( int i, int j, int num){
            inBlock(empty[index][0],empty[index][1],i)){
             A[empty[index][0]][empty[index][1]] = i;
             DisplayBoard();
-            index++;
-            sudoku_solver(empty, index);
-        } 
+            sudoku_solver(empty, index+1);
+        }
      }
-     index--;
-     sudoku_solver(empty, index);
+     A[empty[index][0]][empty[index][1]] = 0;
  }
 
 int main(){
@@ -144,7 +142,7 @@ int main(){
     // for(i=0;i<EmptyFieldCounter();i++){
     //    printf("(%d,%d) ",EmptyPlIndices[i][0],EmptyPlIndices[i][1]);
     // }
-   //sudoku_solver(EmptyPlIndices,0);
+   sudoku_solver(EmptyPlIndices,0);
 
 
     return 0;
