@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jan  5 13:54:15 2021
-
-@author: Akash MSI
-"""
-
 import cv2
 import numpy as np
 #read image
